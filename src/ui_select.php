@@ -108,7 +108,7 @@ class UI_Select extends \booosta\ui\UI
     $extra .= 'onDropdownOpen: function () { var self = this; var value = self.getValue(); value = value || "";
                if (!value.length || value == "0") { self.clear(); return; }}, ';
 
-    $code = "if(\$('#$this->id').length) {
+    $code = "; if(\$('#$this->id').length) {
                \$$this->id = \$('#$this->id').selectize({ persist: false, createOnBlur: true, $extra create: false }); $this->id  = \$$this->id[0].selectize; } ";
 
     if($this->ajaxload):
