@@ -53,6 +53,11 @@ class UI_Select extends \booosta\ui\UI
   public function set_nosort($flag) { $this->nosort = $flag; }
   public function set_ajaxload($flag) { $this->ajaxload = $flag; }
 
+  public function set_name($name) 
+  {
+    $this->select->set_id("ui_select_$name");
+    $this->id = "ui_select_$name";
+  }
 
   public function set_subselect($sub_id, $url)
   {
